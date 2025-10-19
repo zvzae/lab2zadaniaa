@@ -197,18 +197,19 @@ using namespace std;
 	return  0;
 }*/
 //zad16
-int main() 
+int main()
 {
-	int a;
-	int b = 0;
+	srand(time(0));
 	cout << "Podaj szczesliwy numerek" << endl;
+	int a;
 	cin >> a;
-	srand(time(NULL));
+	int counter = 0;
 	for (int i = 0; i < 10; i++) {
 		int losowa_liczba = rand() % 10 + 1;
-		cout << losowa_liczba << endl;
 		if (losowa_liczba == a) {
-			cout << b++ << endl;
+			counter++;
 		}
 	}
+	cout << "Twoj szczesliwy numerek zostal wylosowany " << counter << " razy" << endl;
 }
+
